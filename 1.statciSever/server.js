@@ -6,7 +6,7 @@ const url = require('url');
 const server = http.createServer((req, res) => {
     // 请求的资源路径
     const requestPath = url.parse(req.url).pathname;
-    const filePath = requestPath === '/' ? path.join(__dirname, './static/index.html') : path.join(__dirname, requestPath);
+    const filePath = requestPath === '/' ? path.join(__dirname, './index.html') : path.join(__dirname, requestPath);
 
     // 检查文件是否存在
     fs.stat(filePath, (err, stat) => {
